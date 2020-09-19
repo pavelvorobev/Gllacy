@@ -1,0 +1,348 @@
+/* Fonts */
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'),
+       url('../fonts/roboto.woff2') format('woff2'),
+       url('../fonts/roboto.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'),
+       url('../fonts/robotomedium.woff2') format('woff2'),
+       url('../fonts/robotomedium.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'),
+       url('../fonts/robotobold.woff2') format('woff2'),
+       url('../fonts/robotobold.woff') format('woff');
+  font-display: swap;
+}
+
+/* Variables */
+
+:root {
+  --basic-white: #ffffff;
+  --lighter-white: rgba(255, 255, 255, 0.2);
+
+  --basic-black: #000000;
+  --lighter-black: #323232;
+  --light-black: #5A5A5A;
+
+  --basic-grey: #999999;
+  --lighter-grey: #C4C4C4;
+  --light-grey:  #F8F7F4;
+  --focus-grey: #EDEDED;
+
+  --button-red: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  --hover-red: #FBDED7;
+  --hover-lighter-red: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  --hover-link: #FFBC9E;
+  --hover-darker-link: #E84D37;
+  --focus-red: #D07058;
+  --focus-lighter-red: #F6B5A5;
+  --focus-darker-red: linear-gradient(0deg, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+
+  --green: #849D8F;
+}
+
+/* Global */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+  color: var(--basic-white);
+  background-color: var(--green);
+}
+
+.page a {
+  text-decoration: none;
+  color: var(--basic-white);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Main header */
+
+
+.site-navigation {
+  font-size: 16px;
+  line-height: 18px;
+  list-style: none;
+  font-weight: 700;
+}
+
+.site-navigation a {
+  color: var(--basic-white);
+
+}
+
+.site-navigation a:hover {
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+.site-navigation a:focus {
+  color: var(--basic-black);
+  background-color: var(--focus-grey);
+}
+
+.button {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-white);
+  background-image: var(--button-red);
+}
+
+.button:hover {
+  background-image: var(--hover-lighter-red);
+}
+
+.button:focus {
+  background-image: var(--focus-darker-red);
+}
+
+.user-navigation .button {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--basic-white);
+  background-image: none;
+  background-color: var(--lighter-white);
+}
+
+.user-navigation .button:hover {
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+.main-header-contacts span {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+}
+
+.main-header-contacts a {
+  font-size: 22px;
+  line-height: 24px;
+  color: var(--basic-white);
+}
+
+/* Main slider */
+.main-slider {
+  font-weight: 700;
+  color: var(--basic-white);
+}
+
+.main-slider-items {
+  list-style: none;
+}
+
+.main-slider-title {
+  font-size: 60px;
+  line-height: 60px;
+  color: var(--basic-white);
+}
+
+.main-slider-link {
+  font-size: 32px;
+  line-height: 44px;
+  color: var(--basic-white);
+  background-image: var(--button-red);
+}
+
+.main-slider-link:hover {
+  background-image: var(--hover-lighter-red);
+}
+
+.main-slider-link:focus {
+  background-image: var(--focus-darker-red);
+}
+
+/* Specials */
+
+.specials {
+  font-weight: 700;
+}
+
+.specials-item-title {
+  font-size: 35px;
+  line-height: 41px;
+}
+
+.specials-item-description {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.specials-item-link {
+  font-size: 18px;
+  line-height: 24px;
+  background-image: var(--button-red);
+  color: var(--basic-white);
+}
+
+.specials-item-link:hover {
+  background-image: var(--hover-lighter-red);
+}
+
+.specials-item-link:focus {
+  background-image: var(--focus-darker-red);
+}
+
+/* Hits */
+.hits-items {
+  list-style: none;
+}
+.hits-item-price {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 700;
+}
+
+.hits-item-price span {
+  font-size: 30px;
+  line-height: 35px;
+}
+
+.hits-item-description {
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.hits-item-description:hover, .hits-item-description:focus {
+  color: var(--hover-link);
+}
+
+/* Features */
+
+.features {
+  color: var(--lighter-black);
+}
+
+.features-list {
+  list-style: none;
+}
+
+.features-title {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.features-list-description {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+/* Blog */
+
+.blog-article {
+  background-color: var(--basic-white);
+}
+
+.blog-article, .blog-article a {
+  color: var(--lighter-black);
+}
+
+.blog-article-title {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.blog-article a {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.blog-article-link:hover, .blog-article-link:focus {
+ color: var(--hover-darker-link);
+}
+
+.subscribe-form {
+  background-color: var(--light-grey);
+}
+
+.subscribe-form-description {
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--light-black);
+}
+
+/* .subscribe-button {
+  background-color: var(--button-red);
+} */
+
+/* Contacts */
+
+.contacts-address {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--lighter-black);
+}
+
+.contacts-address span {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.contacts-telephone {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--lighter-black);
+}
+
+.contacts-telephone a {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: var(--lighter-black);
+}
+
+
+/* Main footer */
+
+.footer-social {
+  list-style: none;
+}
+
+.footer-menu {
+  list-style: none;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.footer-menu-item:first-child {
+  font-weight: 700;
+}
+
+.footer-copyright {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.footer-menu-item:hover, .footer-menu-item:focus {
+  color: var(--hover-link);
+}
