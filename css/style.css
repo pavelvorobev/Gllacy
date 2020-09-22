@@ -137,7 +137,7 @@ img {
   background-color: var(--basic-white);
 }
 
-.inner-page .box-button {
+.user-navigation .cart-button-active {
   background-color: var(--basic-white);
   color: var(--lighter-black);
 }
@@ -233,27 +233,28 @@ img {
 }
 
 /* Hits */
-.hits-items, .catalog-items {
+.catalog-items {
   list-style: none;
 }
-.hits-item-price, .catalog-item-price {
+
+.catalog-item-price {
   font-size: 45px;
   line-height: 45px;
   font-weight: 700;
 }
 
-.hits-item-price span, .catalog-item-price span {
+.catalog-item-price span {
   font-size: 30px;
   line-height: 35px;
 }
 
-.hits-item-description, .catalog-item-description {
+.catalog-item-description {
   cursor: pointer;
   font-size: 16px;
   line-height: 22px;
 }
 
-.hits-item-description:hover, .hits-item-description:focus, .catalog-item-description:hover, .catalog-item-description:focus {
+.catalog-item-description:hover, .catalog-item-description:focus {
   color: var(--hover-link);
 }
 
