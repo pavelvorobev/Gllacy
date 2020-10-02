@@ -407,6 +407,7 @@ img {
 
 .pagination-list {
   list-style: none;
+  text-align: right;
 }
 
 .pagination-item {
@@ -430,10 +431,15 @@ img {
 /* Contacts */
 
 .contacts {
+  margin-bottom: 80px;
+  min-height: 430px;
+  background-image: url(https://via.placeholder.com/1200x430);
+}
+
+.contacts-wrapper {
   display: grid;
   grid-template-columns: 2fr 1fr;
   column-gap: 26px;
-  margin-bottom: 80px;
 }
 
 .contacts-pin {
