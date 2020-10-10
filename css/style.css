@@ -144,6 +144,12 @@ img {
   margin: 0 auto;
 }
 
+/* Inner page */
+
+.inner-page {
+  background-color: var(--green);
+}
+
 /* Main header */
 
 
@@ -266,15 +272,24 @@ img {
 /* Breadcrumbs */
 
 .breadcrumbs {
+  display: flex;
   list-style: none;
+  margin: 0;
+  padding: 0;
   font-size: 14px;
   line-height: 16px;
+}
+
+.breadcrumbs li {
+  margin-right: 22px;
 }
 
 .catalog-header {
   font-size: 35px;
   line-height: 41px;
   font-weight: 700;
+  margin-top: 9px;
+  margin-bottom: 0;
 }
 
 
@@ -354,7 +369,6 @@ img {
   grid-template-columns: 1fr 1fr;
   column-gap:26px;
   font-weight: 700;
-  margin-bottom: 40px;
 }
 
 .specials-item-title {
@@ -391,6 +405,7 @@ img {
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-top: 40px;
 }
 
 .catalog-item-price {
@@ -490,27 +505,43 @@ img {
 /* Pagination */
 
 .pagination-list {
+  display: flex;
+  width: 194px;
+  justify-content: space-between;
   list-style: none;
-  text-align: right;
+  margin: 0;
+  padding: 0;
+  margin-top: 80px;
+  margin-left: auto;
 }
 
 .pagination-item {
   font-size: 16px;
   line-height: 18px;
+  text-align: center;
+  width: 26px;
+  height: 26px;
 }
 
-.pagination-item a:hover, .pagination-item a:focus {
+.pagination-item a {
+  display: inline-block;
+}
+
+.pagination-item a:hover {
   background-color: var(--lighter-white);
+  border-radius: 100%;
+  width: 26px;
+  height: 26px;
 }
 
-.pagination-item-current a {
+.pagination-item a:focus {
+  background-color: var(--basic-white);
   color: var(--basic-black);
-  background-color: var(--basic-white);
+  border-radius: 100%;
+  width: 26px;
+  height: 26px;
 }
 
-.pagination-item-current a:hover, .pagination-item-current a:focus {
-  background-color: var(--basic-white);
-}
 
 /* Contacts */
 
@@ -566,7 +597,8 @@ img {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   column-gap: 26px;
-  margin-top: 18px;
+  padding-top: 18px;
+  margin-top: 30px;
 }
 
 .footer-social {
@@ -576,7 +608,7 @@ img {
   width: 164px;
   margin: 0;
   padding: 0;
-  margin-top: 18px;
+  padding-top: 18px;
 }
 
 .footer-menu {
@@ -587,7 +619,7 @@ img {
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-top: 18px;
+  padding-top: 18px;
   font-size: 13px;
   line-height: 18px;
   font-weight: 500;
