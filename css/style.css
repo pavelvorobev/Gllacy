@@ -218,7 +218,7 @@ img {
 .main-header-logo img {
   width: 154px;
   height: 64px;
-  margin-right: 24px;
+  margin-right: 12px;
 }
 /* Site navigation */
 
@@ -235,15 +235,19 @@ img {
 
 .header-link {
   color: var(--basic-white);
+  box-sizing: border-box;
+  border-radius: 26px;
   display: block;
-  margin-right: 32px;
-  margin-top: 20px;
+  margin-right: 5px;
+  margin-top: 10px;
+  padding: 11px 13px 11px 13px;
   text-decoration-color: var(--lighter-white);
 }
 
 .header-link:hover {
   color: var(--basic-black);
   background-color: var(--basic-white);
+  padding: 9px 13px 11px 13px;
 }
 
 .header-link:focus {
@@ -251,8 +255,17 @@ img {
   background-color: var(--focus-grey);
 }
 
-.header-link:active {
-  background-image: var(--focus-red);
+.header-link-current {
+  background-color: var(--focus-red);
+  padding: 9px 13px 11px 13px;
+  text-decoration: none;
+}
+
+.header-link-current:hover, .header-link-current:focus  {
+  background-color: var(--focus-red);
+  padding: 9px 13px 11px 13px;
+  text-decoration: none;
+  color: var(--basic-white);
 }
 
 /* User navigation */
@@ -285,13 +298,20 @@ img {
   background-color: var(--basic-white);
 }
 
-.user-navigation .button:hover path {
+.header-button:hover path {
   fill: var(--basic-black);
 }
+
+.cart-button:hover .cart-background {
+  fill: var(--hover-darker-link);
+}
+
 
 .user-navigation .cart-button-active {
   background-color: var(--basic-white);
   color: var(--lighter-black);
+  width: 118px;
+
 }
 
 .header-button {
@@ -359,8 +379,35 @@ img {
   line-height: 16px;
 }
 
-.breadcrumbs li {
+.breadcrumbs-item {
   margin-right: 22px;
+  position: relative;
+}
+
+.breadcrumbs-item:after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  top: 5px;
+  right: -15px;
+  background-image: url(../img/icon-breadcrumbs-arrow.svg);
+}
+
+.breadcrumbs-item:last-child {
+  margin-right: 0;
+}
+
+.breadcrumbs-item:last-child::after {
+  display: none;
+}
+
+.breadcrumbs-current .text-link {
+  text-decoration: none;
+}
+
+.breadcrumbs-current:hover .text-link {
+  color: var(--basic-white);
 }
 
 .catalog-header {
@@ -746,13 +793,36 @@ img {
 
 .pagination-list {
   display: flex;
-  width: 194px;
+  position: relative;
+  width: 155px;
   justify-content: space-between;
   list-style: none;
   margin: 0;
   padding: 0;
   margin-top: 80px;
   margin-left: auto;
+  margin-right: 15px;
+  margin-bottom: 30px;
+}
+
+.pagination-list:before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: -25px;
+  width: 7px;
+  height: 12px;
+  background-image: url(../img/icon-left-small.svg);
+}
+
+.pagination-list:after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  right: -20px;
+  width: 7px;
+  height: 12px;
+  background-image: url(../img/icon-right-small.svg);
 }
 
 .pagination-item {
@@ -764,24 +834,31 @@ img {
 }
 
 .pagination-item a {
-  display: inline-block;
-}
-
-.pagination-item a:hover {
-  background-color: var(--lighter-white);
-  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--basic-white);
+  text-decoration: none;
   width: 26px;
   height: 26px;
 }
 
-.pagination-item a:focus {
+.pagination-item:hover {
+  background-color: var(--lighter-white);
+  border-radius: 100%;
+}
+
+.pagination-item:focus {
   background-color: var(--basic-white);
   color: var(--basic-black);
   border-radius: 100%;
-  width: 26px;
-  height: 26px;
 }
 
+.pagination-item-current a {
+  background-color: var(--basic-white);
+  color: var(--basic-black);
+  border-radius: 100%;
+}
 
 /* Contacts */
 
@@ -870,6 +947,10 @@ img {
   padding-top: 29px;
 }
 
+.inner-page .main-footer {
+  border-top: 1px solid var(--lighter-white);
+}
+
 .footer-social {
   display: flex;
   flex-wrap: wrap;
@@ -883,15 +964,16 @@ img {
   margin-right: 9px;
 }
 
-.social-button {
+/* .social-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 31px;
-  height: 31px;
+  width: 32px;
+  height: 32px;
   border: 2px solid var(--border-hover-white);
   border-radius: 100%;
-}
+  border-radius: 100%;
+} */
 
 .social-button:hover path {
   fill-opacity: 1;
