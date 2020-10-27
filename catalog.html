@@ -84,8 +84,100 @@
       <h1 class="catalog-header">Сливочное мороженое</h1>
 
       <section class="catalog-filter">
-        <h2 class="visuallyhidden">Фильтр мороженого</h2>
-        <!-- Здесь будет форма для сортировки видов сливочного мороженого -->
+        <h2 class="visuallyhidden">Фильтры мороженого</h2>
+        <form class="filters__form" action="https://echo.htmlacademy.ru/" method="get">
+          <div class="filters__string">
+            <fieldset class="filters__fieldset filters__fieldset--sorting">
+              <legend class="filters__caption">Сортировка:</legend>
+              <label for="sorting">
+                <span class="visuallyhidden">Критерии сортировки</span>
+              </label>
+              <select class="filters__select" name="sorting" id="sorting">
+                <option class="filters__select-option" value="polarity">по полулярности</option>
+                <option class="filters__select-option" value="cheap-first">сначала недорогие</option>
+                <option class="filters__select-option" value="expensive-first">сначала дорогие</option>
+                <option class="filters__select-option" value="fat">по жирности</option>
+              </select>
+              <svg aria-hidden="true" focusable="false" class="filters__arrow" width="11" height="10" viewBox="0 0 11 10"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.5 10L0 0H11" />
+              </svg>
+            </fieldset>
+            <fieldset class="filters__fieldset">
+              <div class="filters__price-wrapper">
+                <p class="filters__caption">Цена:</p>
+                <label for="min-price">
+                  <span class="visuallyhidden">Минимальная цена</span>
+                </label>
+                <input class="filters__price" type="text" name="min-price" id="min-price" value="100" placeholder="100">
+                <span class="filters__price-units"> ₽ – </span>
+                <label for="max-price">
+                  <span class="visuallyhidden">Максимальна яцена</span>
+                </label>
+                <input class="filters__price" type="text" name="max-price" id="max-price" value="500" placeholder="500">
+                <span class="filters__price-units"> ₽</span>
+              </div>
+              <div class="filters__range">
+                <div class="filters__controls">
+                  <div class="filters__scale">
+                    <div class="filters__bar"></div>
+                  </div>
+                  <div class="filters__toggle filters__toggle--min" tabindex="0" aria-label="Уменьшить цену"></div>
+                  <div class="filters__toggle filters__toggle--max" tabindex="0" aria-label="Увеличить цену"></div>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="filters__fieldset">
+              <legend class="filters__caption">Жирность:</legend>
+              <div class="filters__container filters__container--fat">
+                <input class="visuallyhidden filters__radio" type="radio" name="fat" value="0" id="0">
+                <label class="filters__label filters__label--fat" for="0">0%
+                </label>
+                <input class="visuallyhidden filters__radio" type="radio" name="fat" value="from-0-to-10" id="from-0-to-10"
+                  checked>
+                <label class="filters__label filters__label--fat" for="from-0-to-10">до 10%
+                </label>
+                <input class=" visuallyhidden filters__radio" type="radio" name="fat" value="from-0-to-30" id="from-0-to-30">
+                <label class="filters__label filters__label--fat" for="from-0-to-30">до 30%
+                </label>
+                <input class="visuallyhidden filters__radio" type="radio" name="fat" value="more-30" id="more-30">
+                <label class="filters__label filters__label--fat" for="more-30">выше 30%
+                </label>
+              </div>
+            </fieldset>
+          </div>
+          <div class=" filters__string">
+
+            <fieldset class=" filters__fieldset">
+              <legend class="filters__caption">Наполнители:</legend>
+              <div class="filters__container filters__container--additives">
+                <input class="visuallyhidden filters__checkbox" type="checkbox" name="additives" value="chocolate"
+                  id="chocolate" checked>
+                <label class="filters__label filters__label--additives" for="chocolate">
+                  шоколадные
+                </label>
+                <input class="visuallyhidden filters__checkbox" type="checkbox" name="additives" value="sugar-powders"
+                  id="sugar-powders" checked>
+                <label class="filters__label filters__label--additives" for="sugar-powders">
+                  сахарные присыпки
+                </label>
+                <input class="visuallyhidden filters__checkbox" type="checkbox" name="additives" value="fruits" id="fruits">
+                <label class="filters__label filters__label--additives filters__label--additives--fruits" for="fruits">
+                  фрукты
+                </label>
+                <input class="visuallyhidden filters__checkbox" type="checkbox" name="additives" value="syrups" id="syrups">
+                <label class="filters__label filters__label--additives" for="syrups">сиропы
+                </label>
+                <input class="visuallyhidden filters__checkbox" type="checkbox" name="additives" value="jams" id="jams">
+                <label class="filters__label filters__label--additives" for="jams">
+                  джемы
+                </label>
+              </div>
+            </fieldset>
+            <button class="filters__button" type="button">Применить</button>
+          </div>
+        </form>
       </section>
 
       <section class="catalog">
@@ -152,13 +244,25 @@
             <a class="catalog-item-description text-link" href="">Сливочное с мятным сиропом</a>
           </li>
         </ul>
-        <ul class="pagination-list">
-          <li class="pagination-item pagination-item-current"><a href="#">1</a></li>
-          <li class="pagination-item"><a href="#">2</a></li>
-          <li class="pagination-item"><a href="#">3</a></li>
-          <li class="pagination-item"><a href="#">4</a></li>
-          <li class="pagination-item"><a href="#">5</a></li>
-        </ul>
+        <div class="pagination">
+          <a class="pagination-link-prev pagination-link-off">
+            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.15889 6.34125L6.06761 11.8512C6.1703 11.9465 6.30937 12 6.45436 12C6.59934 12 6.73841 11.9465 6.84111 11.8512C6.89146 11.8048 6.93142 11.7495 6.95869 11.6885C6.98596 11.6276 7 11.5623 7 11.4962C7 11.4302 6.98596 11.3649 6.95869 11.304C6.93142 11.243 6.89146 11.1877 6.84111 11.1412L1.3084 6.00125L6.84111 0.831247C6.89146 0.784766 6.93142 0.729465 6.95869 0.668535C6.98596 0.607606 7 0.542253 7 0.476248C7 0.410242 6.98596 0.344889 6.95869 0.283959C6.93142 0.22303 6.89146 0.167728 6.84111 0.121247C6.73357 0.0364304 6.59506 -0.00654793 6.45436 0.00124741C6.38391 0.000448227 6.31406 0.013381 6.2493 0.0392141C6.18454 0.0650473 6.12631 0.103209 6.07835 0.151247L0.15889 5.63125C0.108543 5.67773 0.0685816 5.73303 0.0413108 5.79396C0.01404 5.85489 0 5.92024 0 5.98625C0 6.05225 0.01404 6.11761 0.0413108 6.17854C0.0685816 6.23947 0.108543 6.29477 0.15889 6.34125Z" fill="white"/>
+            </svg>
+          </a>
+          <ul class="pagination-list">
+            <li class="pagination-item pagination-item-current"><a href="#">1</a></li>
+            <li class="pagination-item"><a href="#">2</a></li>
+            <li class="pagination-item"><a href="#">3</a></li>
+            <li class="pagination-item"><a href="#">4</a></li>
+            <li class="pagination-item"><a href="#">5</a></li>
+          </ul>
+          <a class="pagination-link-next">
+            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.84111 5.65875L0.932395 0.148752C0.829699 0.05349 0.690626 0 0.545642 0C0.400659 0 0.261586 0.05349 0.15889 0.148752C0.108543 0.195234 0.0685817 0.250534 0.041311 0.311464C0.0140403 0.372393 0 0.437746 0 0.503752C0 0.569758 0.0140403 0.635111 0.041311 0.69604C0.0685817 0.75697 0.108543 0.812271 0.15889 0.858752L5.6916 5.99875L0.15889 11.1688C0.108543 11.2152 0.0685817 11.2705 0.041311 11.3315C0.0140403 11.3924 0 11.4577 0 11.5238C0 11.5898 0.0140403 11.6551 0.041311 11.716C0.0685817 11.777 0.108543 11.8323 0.15889 11.8788C0.266426 11.9636 0.404942 12.0065 0.545642 11.9988C0.616091 11.9996 0.68594 11.9866 0.750698 11.9608C0.815455 11.935 0.873688 11.8968 0.921651 11.8488L6.84111 6.36875C6.89146 6.32227 6.93142 6.26697 6.95869 6.20604C6.98596 6.14511 7 6.07976 7 6.01375C7 5.94775 6.98596 5.88239 6.95869 5.82146C6.93142 5.76053 6.89146 5.70523 6.84111 5.65875Z" fill="white"/>
+            </svg>
+          </a>
+        </div>
       </section>
     </main>
 
@@ -218,7 +322,7 @@
         </li>
       </ul>
       <div class="footer-copyright">
-        <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank"><img src="/img/logo-htmlacademy.svg" alt="Логотип HTML academy"></a>
+        <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank"><img src="img/logo-htmlacademy.svg" alt="Логотип HTML academy"></a>
         <p class="footer-copyright-description">Сделано в <a class="text-link" href="https://htmlacademy.ru/intensive/study">HTML Academy</a> © 2019</p>
       </div>
     </footer>
