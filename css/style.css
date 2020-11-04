@@ -1724,6 +1724,9 @@ img {
 }
 
 .login-form-link {
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 15px;
   text-decoration: none;
   color: var(--lighter-black);
   border-bottom: 1px solid var(--border-lighter-black);
