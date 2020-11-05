@@ -132,7 +132,6 @@ img {
 /* Site wrapper for slider */
 
 .site-wrapper {
-  min-width: 940px;
   background-color: #849d8f;
   background-image: url("../img/slider-gelato-1.png");
   background-repeat: no-repeat;
