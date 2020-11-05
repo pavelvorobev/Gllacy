@@ -81,7 +81,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: 'Roboto', 'Arial', sans-serif;
   font-size: 14px;
   line-height: 24px;
   font-weight: 500;
@@ -133,24 +133,24 @@ img {
 
 .site-wrapper {
   background-color: #849d8f;
-  background-image: url("../img/slider-gelato-1.png");
+  background-image: url('../img/slider-gelato-1.png');
   background-repeat: no-repeat;
   background-position: top center;
 }
 
 .site-wrapper-1 {
   background-color: #849d8f;
-  background-image: url("../img/slider-gelato-1.png");
+  background-image: url('../img/slider-gelato-1.png');
 }
 
 .site-wrapper-2 {
   background-color: #8996a6;
-  background-image: url("../img/slider-gelato-2.png");
+  background-image: url('../img/slider-gelato-2.png');
 }
 
 .site-wrapper-3 {
   background-color: #9d8b84;
-  background-image: url("../img/slider-gelato-3.png");
+  background-image: url('../img/slider-gelato-3.png');
 }
 
 /* Container */
@@ -302,7 +302,7 @@ img {
 }
 
 .sub-menu-novelty:after {
-  content: "";
+  content: '';
   display: block;
   height: 1px;
   padding: 0;
@@ -498,13 +498,13 @@ img {
 }
 
 .breadcrumbs-item:after {
-  content: "";
+  content: '';
   position: absolute;
   width: 6px;
   height: 6px;
   top: 5px;
   right: -15px;
-  background-image: url(../img/icon-breadcrumbs-arrow.svg);
+  background-image: url('../img/icon-breadcrumbs-arrow.svg');
 }
 
 .breadcrumbs-item:last-child {
@@ -677,11 +677,11 @@ img {
 }
 
 .specials-raspberries {
-  background-image: url("../img/raspberries-bg.jpg");
+  background-image: url('../img/raspberries-bg.jpg');
 }
 
 .specials-chocolate {
-  background-image: url("../img/chocolate-bg.jpg");
+  background-image: url('../img/chocolate-bg.jpg');
 }
 
 /* Catalog items */
@@ -786,12 +786,12 @@ img {
 }
 
 .catalog-item-hit:before {
-  content: "";
+  content: '';
   display: block;
   width: 61px;
   height: 61px;
   position: absolute;
-  background-image: url("../img/icon-hit.svg");
+  background-image: url('../img/icon-hit.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-color: var(--basic-white);
@@ -833,7 +833,7 @@ img {
 .features-list-item:before {
   display: block;
   position: absolute;
-  content: "";
+  content: '';
   left: 0;
   top: -10px;
   width: 46px;
@@ -843,25 +843,25 @@ img {
 }
 
 .features-list-production:before  {
-  background-image: url(../img/icon-gelato.svg);
+  background-image: url('../img/icon-gelato.svg');
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .features-list-farms:before {
-  background-image: url(../img/icon-cow.svg);
+  background-image: url('../img/icon-cow.svg');
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .features-list-ingredients:before {
-  background-image: url(../img/icon-leaf.svg);
+  background-image: url('../img/icon-leaf.svg');
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .features-list-delivery:before {
-  background-image: url(../img/icon-thermometer.svg);
+  background-image: url('../img/icon-thermometer.svg');
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -898,7 +898,7 @@ img {
 .blog-article {
   box-sizing: border-box;
   background-color: var(--basic-white);
-  background-image: url(../img/strawberry-bg.jpg);
+  background-image: url('../img/strawberry-bg.jpg');
   background-repeat: no-repeat;
   block-size: cover;
   min-height: 220px;
@@ -968,26 +968,6 @@ img {
 .pagination-link-off path {
   fill-opacity: 0.2;
 }
-
-/* .pagination-list:before {
-  content: "";
-  position: absolute;
-  top: 7px;
-  left: -25px;
-  width: 7px;
-  height: 12px;
-  background-image: url(../img/icon-left-small.svg);
-} */
-
-/* .pagination-list:after {
-  content: "";
-  position: absolute;
-  top: 7px;
-  right: -20px;
-  width: 7px;
-  height: 12px;
-  background-image: url(../img/icon-right-small.svg);
-} */
 
 .pagination-item {
   font-size: 16px;
@@ -1172,12 +1152,12 @@ img {
 
 .item-heart:before {
   position: absolute;
-  content: "";
+  content: '';
   top: 3px;
   left: -22px;
   width: 15px;
   height: 13px;
-  background: url("../img/icon-heart.svg") center no-repeat;
+  background: url('../img/icon-heart.svg') center no-repeat;
 }
 
 .footer-menu-item:first-child {
@@ -1188,8 +1168,7 @@ img {
 .footer-copyright {
   font-size: 12px;
   line-height: 18px;
-  justify-self: end;/*
-  margin-top: 10px; */
+  justify-self: end;
 }
 
 .footer-copyright-description {
@@ -1258,7 +1237,7 @@ img {
 }
 
 .filters-arrow {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 14px;
   right: 16px;
@@ -1413,13 +1392,13 @@ img {
 }
 
 .filters-label-fat::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: -2px;
   width: 22px;
   height: 22px;
-  background-image: url(../img/icon-radio-off.svg);
+  background-image: url('../img/icon-radio-off.svg');
   background-repeat: no-repeat;
   opacity: 0.8;
 }
@@ -1430,7 +1409,7 @@ img {
 }
 
 .filters-radio:checked + .filters-label-fat::before {
-  background-image: url(../img/icon-radio-on.svg);
+  background-image: url('../img/icon-radio-on.svg');
   background-repeat: no-repeat;
 }
 
@@ -1466,13 +1445,13 @@ img {
 }
 
 .filters-label-additives::before {
-  content: "";
+  content: '';
   position: absolute;
   left: -3px;
   top: -1px;
   width: 20px;
   height: 20px;
-  background-image: url(../img/icon-checkbox-off.svg);
+  background-image: url('../img/icon-checkbox-off.svg');
   background-repeat: no-repeat;
   opacity: 0.8;
 }
@@ -1480,7 +1459,7 @@ img {
 .filters-checkbox:checked + .filters-label-additives::before {
   width: 24px;
   height: 20px;
-  background-image: url(../img/icon-checkbox-on.svg);
+  background-image: url('../img/icon-checkbox-on.svg');
 }
 
 .filters-button {
@@ -1765,8 +1744,8 @@ img {
   padding: 25px 16px 0 20px;
   background-color: var(--light-gray);
   border: 5px solid var(--focus-lighter-red);
-  -o-border-image: url("../img/blog-form-bg.png") 6;
-     border-image: url("../img/blog-form-bg.png") 6;
+  -o-border-image: url('../img/blog-form-bg.png') 6;
+     border-image: url('../img/blog-form-bg.png') 6;
   background-repeat: no-repeat;
   border-radius: 16px;
   box-shadow: none;
@@ -1829,7 +1808,7 @@ img {
   position: absolute;
   left: -3px;
   bottom: 8px;
-  content: "";
+  content: '';
   width: 24px;
   height: 2px;
   background-color: var(--basic-black);
@@ -1841,7 +1820,7 @@ img {
   position: absolute;
   left: -3px;
   bottom: 8px;
-  content: "";
+  content: '';
   width: 24px;
   height: 2px;
   background-color: var(--basic-black);
