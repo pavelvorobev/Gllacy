@@ -1080,6 +1080,7 @@ img {
 
 .contacts-telephone a {
   display: inline-block;
+  vertical-align: middle;
   margin-top: 3px;
   font-size: 18px;
   line-height: 24px;
@@ -1619,6 +1620,7 @@ img {
 
 .cart-item-description {
   display: inline-block;
+  vertical-align: middle;
   text-align: left;
   width: 218px;
   margin-right: 29px;
@@ -1860,6 +1862,7 @@ img {
 
 .contacts-modal-form label {
   display: inline-block;
+  vertical-align: middle;
 }
 
 .contacts-modal-title {
